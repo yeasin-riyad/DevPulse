@@ -1,6 +1,7 @@
 import express, { type Application, type Request, type Response } from 'express'
 import cors from 'cors'
 import globalErrorHandler from './middleware/globalErrorHandler';
+import { authRouter } from './modules/auth/auth.route';
 const app:Application = express()
 
 // Built-in Middlewares
@@ -20,6 +21,7 @@ app.get('/', (req:Request, res:Response) => {
 
 
 // Custom Routes Middleware
+app.use('/api/auth',authRouter);
 // app.use('/api/user',userRouter);
 // app.use('/api/profile', profileRoute);
 // app.use('/api/auth', authRouter);
