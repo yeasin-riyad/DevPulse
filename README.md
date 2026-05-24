@@ -126,7 +126,7 @@ git clone https://github.com/yeasin-riyad/DevPulse.git
 ## 2️⃣ Move Into Project
 
 ```bash
-cd devpulse
+cd DevPulse
 ```
 
 ---
@@ -144,7 +144,7 @@ npm install
 ```env
 PORT=8000
 
-DATABASE_URL=your_postgresql_connection_string
+POSTGRESQL_CONNECTION_STRING=your_postgresql_connection_string
 
 JWT_SECRET=your_secret_key
 ```
