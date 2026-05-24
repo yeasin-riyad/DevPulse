@@ -5,7 +5,7 @@ export default defineConfig({
   entry: ['src/server.ts'],
 
   // 2. Output formats: CommonJS and ES Modules
-  format: ['cjs', 'esm'],
+  format: ['esm'],
   target:'esnext',
   outDir:'dist',
 
