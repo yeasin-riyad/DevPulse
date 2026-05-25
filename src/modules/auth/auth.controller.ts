@@ -68,7 +68,7 @@ if (!emailRegex.test(email)) {
         return sendResponse(res, {
       statusCode: 201,
       success: true,
-      message: "User Created successfully!",
+      message: "User registered successfully!",
       data:result.rows[0] as IUserResponse,
     });
     

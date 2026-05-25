@@ -220,9 +220,6 @@ export const getSingleIssue = async (
 
     // Fetch Issue
     const result =await getSingleIssueFromDB(id);
-        delete result.reporter_id;
-
-
     // Not Found
     if (!result) {
       return sendResponse(res, {
@@ -284,7 +281,7 @@ export const updateIssue = async (
     }
 
     // Current User
-    const currentUser = req.user;
+    const currentUser = req?.user;
 
     /*
       Authorization Rules
@@ -305,7 +302,7 @@ export const updateIssue = async (
 
       // Own Issue Check
       if (
-        existingIssue.reporter_id !==
+        existingIssue?.reporter?.id!==
         currentUser.id
       ) {
         return sendResponse(res, {

@@ -127,11 +127,16 @@ export const getAllIssuesFromDB = async (
         (user) =>
           user.id === issue.reporter_id
       );
-      delete issue.reporter_id;
 
       return {
-        ...issue,
+        "id":issue.id,
+        "title":issue.title,
+        "description":issue.description,
+        "type":issue.type,
+        "status":issue.status,
         reporter,
+        "created_at":issue.created_at,
+        "updated_at":issue.updated_at
       };
     }
   );
@@ -154,6 +159,7 @@ export const getSingleIssueFromDB = async (
   );
 
   const issue = issueResult.rows[0];
+
 
   if (!issue) {
     return null;
@@ -178,10 +184,16 @@ export const getSingleIssueFromDB = async (
 
     // delete issue.reporter_id;
   // Merge Reporter
-  const finalIssue = {
-    ...issue,
-    reporter,
-  };
+  const finalIssue ={
+        "id":issue.id,
+        "title":issue.title,
+        "description":issue.description,
+        "type":issue.type,
+        "status":issue.status,
+        reporter,
+        "created_at":issue.created_at,
+        "updated_at":issue.updated_at,
+      };
 
   return finalIssue;
 };

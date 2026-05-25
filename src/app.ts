@@ -10,7 +10,9 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: "http://localhost:8000",
+    // origin: "http://localhost:8000",
+    origin:["https://dev-pulse-beige-xi.vercel.app","http://localhost:8000"]
+
   }),
 );
 app.get('/', (req:Request, res:Response) => {
