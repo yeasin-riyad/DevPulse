@@ -432,7 +432,3 @@ Maintainer Only
 Backend Developer | TypeScript & PostgreSQL Enthusiast
 
 ---
-
-# 📜 License
-
-This project is licensed under the MIT License.
